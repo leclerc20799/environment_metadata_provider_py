@@ -1,0 +1,14 @@
+[project]
+name = "environment-metadata-provider-py"
+version = "0.1.0"
+description = "Immutable dict of hostname, PID, Python version and boot time for log records."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
