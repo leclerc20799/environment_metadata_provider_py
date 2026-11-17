@@ -37,3 +37,10 @@ raises `RuntimeError` at startup rather than returning a misleading value. This
 is intentional: a log enricher that silently reports the wrong boot time is
 worse than one that fails loudly. If you need portable boot-time detection, wrap
 the call and provide your own fallback.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
