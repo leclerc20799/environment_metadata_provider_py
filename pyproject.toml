@@ -1,6 +1,6 @@
 [project]
 name = "environment-metadata-provider-py"
-version = "0.1.0"
+version = "0.1.1"
 description = "Immutable dict of hostname, PID, Python version and boot time for log records."
 requires-python = ">=3.10"
 dependencies = []
